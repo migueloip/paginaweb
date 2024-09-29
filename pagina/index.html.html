@@ -1,0 +1,394 @@
+<html><head><base href="https://websimcreation.com/cv/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum Vitae de Miguel Ángel Figueroa Muñoz</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f0f0f0;
+  }
+  .cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/a/7e645bfd-2f57-44d6-83ad-947fcb4998c3');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .cover h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+  }
+  .cover .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+  .arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 2;
+    cursor: pointer;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) translateX(-50%);
+    }
+    40% {
+      transform: translateY(-30px) translateX(-50%);
+    }
+    60% {
+      transform: translateY(-15px) translateX(-50%);
+    }
+  }
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+  h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .contact-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    fill: #3498db;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+  }
+  li::before {
+    content: '▹';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  @media (max-width: 600px) {
+    .cover h1 {
+      font-size: 2.5em;
+    }
+    .cover .subtitle {
+      font-size: 1.2em;
+    }
+  }
+  
+  .animated-name {
+    display: inline-block;
+  }
+  .animated-name span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px) rotate(20deg);
+    animation: fallIn 0.5s forwards;
+  }
+  @keyframes fallIn {
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+  .skill-bar {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  .skill-progress {
+    height: 100%;
+    background-color: #3498db;
+    width: 0;
+    transition: width 1s ease-in-out;
+  }
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #3498db;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3498db;
+  }
+  .highlight {
+    background-color: #f39c12;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .certificates {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .certificates h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  .certificate-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .certificate-item svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: #27ae60;
+  }
+</style>
+</head>
+<body>
+  <div class="cover">
+    <h1 class="animated-name" id="animatedName"></h1>
+    <p class="subtitle">Desarrollador Web y Técnico en Reparaciones</p>
+    <svg class="arrow" width="40" height="40" viewBox="0 0 24 24" fill="white">
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+    </svg>
+  </div>
+
+  <div class="content">
+    <section id="personal-info">
+      <h2>Información Personal</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>anguelmiguel640@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span>+56 9 5706 8275</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span>Linares, Chile</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24">
+            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+          </svg>
+          <span>@low.miiguel</span>
+        </div>
+      </div>
+      
+      <div class="certificates">
+        <h3>Certificaciones</h3>
+        <div class="certificate-item">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
+          </svg>
+          <span>Fundación Telefónica</span>
+        </div>
+        <div class="certificate-item">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
+          </svg>
+          <span>Cisco</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experiencia Laboral</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Desarrollador Web Freelance</h3>
+          <p>Creación de páginas web personalizadas para clientes diversos.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Técnico en Reparación de Celulares</h3>
+          <p>Servicio independiente de diagnóstico y reparación de dispositivos móviles.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Especialista en Mantenimiento de PCs</h3>
+          <p>Servicios de mantenimiento y reparación de computadoras personales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Educación</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Liceo Bicentenario Instituto Comercial (L.B.I.C)</h3>
+          <p>Educación Media | Linares, Chile | 2022-2025</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Escuela Pedro Aguirre Cerda (P.A.C)</h3>
+          <p>Educación Básica | Linares, Chile | 2011-2021</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>
+          Java
+          <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+        </li>
+        <li>
+          HTML
+          <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+        </li>
+        <li>
+          Python
+          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        </li>
+        <li>
+          CSS
+          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </li>
+        <li>
+          JavaScript
+          <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+        </li>
+      </ul>
+      <p>Continúo estudiando para desarrollar habilidades en <span class="highlight">múltiples lenguajes adicionales</span>.</p>
+    </section>
+
+    <section id="interests">
+      <h2>Intereses</h2>
+      <ul>
+        <li>Inteligencia Artificial (IA)</li>
+        <li>Informática</li>
+        <li>El espacio</li>
+        <li>Ciencia</li>
+        <li>Robótica</li>
+      </ul>
+    </section>
+
+    <section id="about-me">
+      <h2>Sobre Mí</h2>
+      <p>Soy un profesional dedicado y apasionado por la tecnología. Mi enfoque se caracteriza por:</p>
+      <ul>
+        <li><strong>Perseverancia:</strong> No me rindo fácilmente y estoy dispuesto a intentar múltiples veces hasta lograr el resultado deseado.</li>
+        <li><strong>Actitud positiva:</strong> Mantengo una actitud alegre y disfruto de un buen ambiente de trabajo.</li>
+        <li><strong>Pasión por la innovación:</strong> La ciencia y la robótica son mis grandes pasiones, lo que me impulsa a estar siempre actualizado en las últimas tendencias tecnológicas.</li>
+      </ul>
+      <p>Mi objetivo es aplicar mis habilidades y conocimientos para contribuir de manera significativa en proyectos desafiantes e innovadores.</p>
+    </section>
+  </div>
+
+  <script>
+    const name = "Miguel Ángel Figueroa Muñoz";
+    const nameElement = document.getElementById('animatedName');
+    
+    name.split('').forEach((char, index) => {
+      const span = document.createElement('span');
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.animationDelay = `${index * 0.1}s`;
+      nameElement.appendChild(span);
+    });
+
+    document.querySelector('.arrow').addEventListener('click', function() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.getAttribute('data-width');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.skill-progress').forEach(bar => {
+      bar.setAttribute('data-width', bar.style.width);
+      bar.style.width = '0';
+      observer.observe(bar);
+    });
+  </script>
+</body>
+</html>
